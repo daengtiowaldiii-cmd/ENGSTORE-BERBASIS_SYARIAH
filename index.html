@@ -31,7 +31,7 @@
 
         .main-container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
         
-        /* --- NEW: GAME HEADLINE BANNER --- */
+        /* HEADER BANNER */
         .game-banner {
             display: flex; align-items: center; gap: 15px;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -283,29 +283,32 @@
     </div>
 
     <script>
-        // DATASET LENGKAP
+        // --- DATASET HARGA: DIBAWAH CODASHOP (COMPETITIVE) ---
+        // Logika: Base Price (Modal H2H) + Fee Wajar = Total (Lebih murah dari Toko sebelah)
         const DIAMONDS = [
-            { id: 'dm1', val: '5', price: 1600, fee: 100 },
-            { id: 'dm2', val: '12', price: 3800, fee: 200 },
-            { id: 'dm3', val: '28', price: 8400, fee: 400 },
-            { id: 'dm4', val: '59', price: 17000, fee: 800 },
-            { id: 'dm5', val: '85', price: 24000, fee: 1000 },
-            { id: 'dm6', val: '170', price: 48000, fee: 2000 },
-            { id: 'dm7', val: '240', price: 68000, fee: 2500 },
-            { id: 'dm8', val: '296', price: 84000, fee: 3000 },
-            { id: 'dm9', val: '408', price: 115000, fee: 4000 },
-            { id: 'dm10', val: '568', price: 160000, fee: 5000 },
-            { id: 'dm11', val: '875', price: 245000, fee: 7000 },
-            { id: 'dm12', val: '2010', price: 550000, fee: 15000 },
-            { id: 'dm13', val: '4830', price: 1350000, fee: 25000 },
-            { id: 'dm14', val: '6050', price: 1650000, fee: 30000 },
+            { id: 'dm1', val: '5', price: 1425, fee: 75 },      // Total: 1.500 (Toko Sebelah ~1.600)
+            { id: 'dm2', val: '12', price: 3300, fee: 200 },    // Total: 3.500 (Toko Sebelah ~3.800)
+            { id: 'dm3', val: '28', price: 7800, fee: 400 },    // Total: 8.200 (Toko Sebelah ~8.500)
+            { id: 'dm4', val: '59', price: 15600, fee: 900 },   // Total: 16.500 (Toko Sebelah ~17.500)
+            { id: 'dm5', val: '85', price: 22000, fee: 1000 },  // Total: 23.000 (Toko Sebelah ~24.500)
+            { id: 'dm6', val: '170', price: 44000, fee: 2000 }, // Total: 46.000 (Toko Sebelah ~48.500)
+            { id: 'dm7', val: '240', price: 62500, fee: 2500 }, // Total: 65.000 (Toko Sebelah ~68.000)
+            { id: 'dm8', val: '296', price: 77000, fee: 3000 }, // Total: 80.000 (Toko Sebelah ~84.000)
+            { id: 'dm9', val: '408', price: 105000, fee: 4000 },// Total: 109.000 (Toko Sebelah ~115.000)
+            { id: 'dm10', val: '568', price: 145000, fee: 5000 },// Total: 150.000 (Toko Sebelah ~160.000)
+            { id: 'dm11', val: '875', price: 225000, fee: 5000 },// Total: 230.000 (Toko Sebelah ~245.000)
+            { id: 'dm12', val: '2010', price: 510000, fee: 10000 },// Total: 520.000 (Toko Sebelah ~550.000)
+            { id: 'dm13', val: '4830', price: 1220000, fee: 30000 },// Total: 1.250.000 (Toko Sebelah ~1.350.000)
+            { id: 'dm14', val: '6050', price: 1520000, fee: 30000 },// Total: 1.550.000 (Toko Sebelah ~1.650.000)
         ];
+
         const SUBS = [
-            { id: 'sub1', name: 'Weekly Pass', price: 29000, fee: 1000 },
-            { id: 'sub2', name: 'Twilight Pass', price: 150000, fee: 5000 },
-            { id: 'sub3', name: 'Starlight Member', price: 165000, fee: 5000 },
-            { id: 'sub4', name: 'Starlight Premium', price: 450000, fee: 10000 },
+            { id: 'sub1', name: 'Weekly Pass', price: 26500, fee: 1000 }, // Total: 27.500 (Murah!)
+            { id: 'sub2', name: 'Twilight Pass', price: 138000, fee: 2000 }, 
+            { id: 'sub3', name: 'Starlight Member', price: 145000, fee: 5000 }, 
+            { id: 'sub4', name: 'Starlight Premium', price: 410000, fee: 10000 },
         ];
+        
         const PAYMENTS = [
             { id: 'bsi', name: 'BSI Virtual Account', img: '🏦' },
             { id: 'bmi', name: 'Muamalat VA', img: '🕌' },
